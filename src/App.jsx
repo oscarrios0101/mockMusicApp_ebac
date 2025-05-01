@@ -14,7 +14,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <SearchProvider>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/album/:albumId" element={<AlbumDetails />} />
