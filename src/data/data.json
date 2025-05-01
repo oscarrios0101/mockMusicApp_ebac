@@ -1,0 +1,352 @@
+[
+  {
+    "id": "1",
+    "album": "Thriller",
+    "artist": "Michael Jackson",
+    "song": "Billie Jean",
+    "releaseYear": 1982
+  },
+  {
+    "id": "2",
+    "album": "Thriller",
+    "artist": "Michael Jackson",
+    "song": "Beat It",
+    "releaseYear": 1982
+  },
+  {
+    "id": "3",
+    "album": "Like a Virgin",
+    "artist": "Madonna",
+    "song": "Like a Virgin",
+    "releaseYear": 1984
+  },
+  {
+    "id": "4",
+    "album": "Like a Virgin",
+    "artist": "Madonna",
+    "song": "Material Girl",
+    "releaseYear": 1984
+  },
+  {
+    "id": "5",
+    "album": "Purple Rain",
+    "artist": "Prince",
+    "song": "When Doves Cry",
+    "releaseYear": 1984
+  },
+  {
+    "id": "6",
+    "album": "Purple Rain",
+    "artist": "Prince",
+    "song": "Let's Go Crazy",
+    "releaseYear": 1984
+  },
+  {
+    "id": "7",
+    "album": "The Joshua Tree",
+    "artist": "U2",
+    "song": "With or Without You",
+    "releaseYear": 1987
+  },
+  {
+    "id": "8",
+    "album": "The Joshua Tree",
+    "artist": "U2",
+    "song": "Where the Streets Have No Name",
+    "releaseYear": 1987
+  },
+  {
+    "id": "9",
+    "album": "Straight Outta Compton",
+    "artist": "N.W.A",
+    "song": "Straight Outta Compton",
+    "releaseYear": 1988
+  },
+  {
+    "id": "10",
+    "album": "Straight Outta Compton",
+    "artist": "N.W.A",
+    "song": "Express Yourself",
+    "releaseYear": 1988
+  },
+  {
+    "id": "11",
+    "album": "...Baby One More Time",
+    "artist": "Britney Spears",
+    "song": "...Baby One More Time",
+    "releaseYear": 1998
+  },
+  {
+    "id": "12",
+    "album": "...Baby One More Time",
+    "artist": "Britney Spears",
+    "song": "(You Drive Me) Crazy",
+    "releaseYear": 1999
+  },
+  {
+    "id": "13",
+    "album": "The Slim Shady LP",
+    "artist": "Eminem",
+    "song": "My Name Is",
+    "releaseYear": 1999
+  },
+  {
+    "id": "14",
+    "album": "The Slim Shady LP",
+    "artist": "Eminem",
+    "song": "Stan",
+    "releaseYear": 2000
+  },
+  {
+    "id": "15",
+    "album": "Oops!... I Did It Again",
+    "artist": "Britney Spears",
+    "song": "Oops!... I Did It Again",
+    "releaseYear": 2000
+  },
+  {
+    "id": "16",
+    "album": "Oops!... I Did It Again",
+    "artist": "Britney Spears",
+    "song": "Stronger",
+    "releaseYear": 2000
+  },
+  {
+    "id": "17",
+    "album": "The Marshall Mathers LP",
+    "artist": "Eminem",
+    "song": "The Real Slim Shady",
+    "releaseYear": 2000
+  },
+  {
+    "id": "18",
+    "album": "The Marshall Mathers LP",
+    "artist": "Eminem",
+    "song": "Lose Yourself",
+    "releaseYear": 2002
+  },
+  {
+    "id": "19",
+    "album": "Stripped",
+    "artist": "Christina Aguilera",
+    "song": "Dirrty",
+    "releaseYear": 2002
+  },
+  {
+    "id": "20",
+    "album": "Stripped",
+    "artist": "Christina Aguilera",
+    "song": "Beautiful",
+    "releaseYear": 2002
+  },
+  {
+    "id": "21",
+    "album": "The College Dropout",
+    "artist": "Kanye West",
+    "song": "Jesus Walks",
+    "releaseYear": 2004
+  },
+  {
+    "id": "22",
+    "album": "The College Dropout",
+    "artist": "Kanye West",
+    "song": "Gold Digger",
+    "releaseYear": 2005
+  },
+  {
+    "id": "23",
+    "album": "The Emancipation of Mimi",
+    "artist": "Mariah Carey",
+    "song": "We Belong Together",
+    "releaseYear": 2005
+  },
+  {
+    "id": "24",
+    "album": "The Emancipation of Mimi",
+    "artist": "Mariah Carey",
+    "song": "Shake It Off",
+    "releaseYear": 2005
+  },
+  {
+    "id": "25",
+    "album": "Late Registration",
+    "artist": "Kanye West",
+    "song": "Touch the Sky",
+    "releaseYear": 2005
+  },
+  {
+    "id": "26",
+    "album": "Late Registration",
+    "artist": "Kanye West",
+    "song": "Heard 'Em Say",
+    "releaseYear": 2005
+  },
+  {
+    "id": "27",
+    "album": "Back to Black",
+    "artist": "Amy Winehouse",
+    "song": "Rehab",
+    "releaseYear": 2006
+  },
+  {
+    "id": "28",
+    "album": "Back to Black",
+    "artist": "Amy Winehouse",
+    "song": "Valerie",
+    "releaseYear": 2007
+  },
+  {
+    "id": "29",
+    "album": "Graduation",
+    "artist": "Kanye West",
+    "song": "Stronger",
+    "releaseYear": 2007
+  },
+  {
+    "id": "30",
+    "album": "Graduation",
+    "artist": "Kanye West",
+    "song": "Good Life",
+    "releaseYear": 2007
+  },
+  {
+    "id": "31",
+    "album": "Good Girl Gone Bad",
+    "artist": "Rihanna",
+    "song": "Umbrella",
+    "releaseYear": 2007
+  },
+  {
+    "id": "32",
+    "album": "Good Girl Gone Bad",
+    "artist": "Rihanna",
+    "song": "Don't Stop the Music",
+    "releaseYear": 2007
+  },
+  {
+    "id": "33",
+    "album": "Tha Carter III",
+    "artist": "Lil Wayne",
+    "song": "A Milli",
+    "releaseYear": 2008
+  },
+  {
+    "id": "34",
+    "album": "Tha Carter III",
+    "artist": "Lil Wayne",
+    "song": "Lollipop",
+    "releaseYear": 2008
+  },
+  {
+    "id": "35",
+    "album": "Teenage Dream",
+    "artist": "Katy Perry",
+    "song": "California Gurls",
+    "releaseYear": 2010
+  },
+  {
+    "id": "36",
+    "album": "Teenage Dream",
+    "artist": "Katy Perry",
+    "song": "Firework",
+    "releaseYear": 2010
+  },
+  {
+    "id": "37",
+    "album": "My Beautiful Dark Twisted Fantasy",
+    "artist": "Kanye West",
+    "song": "Runaway",
+    "releaseYear": 2010
+  },
+  {
+    "id": "38",
+    "album": "My Beautiful Dark Twisted Fantasy",
+    "artist": "Kanye West",
+    "song": "Power",
+    "releaseYear": 2010
+  },
+  {
+    "id": "39",
+    "album": "21",
+    "artist": "Adele",
+    "song": "Rolling in the Deep",
+    "releaseYear": 2010
+  },
+  {
+    "id": "40",
+    "album": "21",
+    "artist": "Adele",
+    "song": "Someone Like You",
+    "releaseYear": 2011
+  },
+  {
+    "id": "41",
+    "album": "Watch the Throne",
+    "artist": "Jay-Z & Kanye West",
+    "song": "Niggas in Paris",
+    "releaseYear": 2011
+  },
+  {
+    "id": "42",
+    "album": "Watch the Throne",
+    "artist": "Jay-Z & Kanye West",
+    "song": "Otis",
+    "releaseYear": 2011
+  },
+  {
+    "id": "43",
+    "album": "Born This Way",
+    "artist": "Lady Gaga",
+    "song": "Born This Way",
+    "releaseYear": 2011
+  },
+  {
+    "id": "44",
+    "album": "Born This Way",
+    "artist": "Lady Gaga",
+    "song": "Poker Face",
+    "releaseYear": 2008
+  },
+  {
+    "id": "45",
+    "album": "good kid, m.A.A.d city",
+    "artist": "Kendrick Lamar",
+    "song": "Swimming Pools (Drank)",
+    "releaseYear": 2012
+  },
+  {
+    "id": "46",
+    "album": "good kid, m.A.A.d city",
+    "artist": "Kendrick Lamar",
+    "song": "Money Trees",
+    "releaseYear": 2012
+  },
+  {
+    "id": "47",
+    "album": "Red",
+    "artist": "Taylor Swift",
+    "song": "We Are Never Ever Getting Back Together",
+    "releaseYear": 2012
+  },
+  {
+    "id": "48",
+    "album": "Red",
+    "artist": "Taylor Swift",
+    "song": "All Too Well",
+    "releaseYear": 2012
+  },
+  {
+    "id": "49",
+    "album": "Random Access Memories",
+    "artist": "Daft Punk",
+    "song": "Get Lucky",
+    "releaseYear": 2013
+  },
+  {
+    "id": "50",
+    "album": "Random Access Memories",
+    "artist": "Daft Punk",
+    "song": "Lose Yourself to Dance",
+    "releaseYear": 2013
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "song": "Bohemian Rhapsody",
+    "album": "A Night at the Opera",
+    "artist": "Queen",
+    "id": 1,
+    "release_year": 1975
+  },
+  {
+    "song": "Like a Rolling Stone",
+    "album": "Highway 61 Revisited",
+    "artist": "Bob Dylan",
+    "id": 2,
+    "release_year": 1965
+  },
+  {
+    "song": "Smells Like Teen Spirit",
+    "album": "Nevermind",
+    "artist": "Nirvana",
+    "id": 3,
+    "release_year": 1991
+  },
+  {
+    "song": "Imagine",
+    "album": "Imagine",
+    "artist": "John Lennon",
+    "id": 4,
+    "release_year": 1971
+  },
+  {
+    "song": "Billie Jean",
+    "album": "Thriller",
+    "artist": "Michael Jackson",
+    "id": 5,
+    "release_year": 1982
+  },
+  {
+    "song": "Hotel California",
+    "album": "Hotel California",
+    "artist": "Eagles",
+    "id": 6,
+    "release_year": 1976
+  },
+  {
+    "song": "Hey Jude",
+    "album": "Hey Jude",
+    "artist": "The Beatles",
+    "id": 7,
+    "release_year": 1968
+  },
+  {
+    "song": "Stairway to Heaven",
+    "album": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "id": 8,
+    "release_year": 1971
+  },
+  {
+    "song": "Good Vibrations",
+    "album": "Smiley Smile",
+    "artist": "The Beach Boys",
+    "id": 9,
+    "release_year": 1966
+  },
+  {
+    "song": "Sweet Child o' Mine",
+    "album": "Appetite for Destruction",
+    "artist": "Guns N' Roses",
+    "id": 10,
+    "release_year": 1987
+  },
+  {
+    "song": "The Message",
+    "album": "The Message",
+    "artist": "Grandmaster Flash & The Furious Five",
+    "id": 11,
+    "release_year": 1982
+  },
+  {
+    "song": "Walk This Way",
+    "album": "Raising Hell",
+    "artist": "Run-DMC ft. Aerosmith",
+    "id": 12,
+    "release_year": 1986
+  },
+  {
+    "song": "Fight the Power",
+    "album": "Fear of a Black Planet",
+    "artist": "Public Enemy",
+    "id": 13,
+    "release_year": 1990
+  },
+  {
+    "song": "Nuthin' but a 'G' Thang",
+    "album": "The Chronic",
+    "artist": "Dr. Dre ft. Snoop Dogg",
+    "id": 14,
+    "release_year": 1992
+  },
+  {
+    "song": "Juicy",
+    "album": "Ready to Die",
+    "artist": "The Notorious B.I.G.",
+    "id": 15,
+    "release_year": 1994
+  },
+  {
+    "song": "Lose Yourself",
+    "album": "8 Mile Soundtrack",
+    "artist": "Eminem",
+    "id": 16,
+    "release_year": 2002
+  },
+  {
+    "song": "Alright",
+    "album": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "id": 17,
+    "release_year": 2015
+  },
+  {
+    "song": "Ms. Jackson",
+    "album": "Stankonia",
+    "artist": "Outkast",
+    "id": 18,
+    "release_year": 2000
+  },
+  {
+    "song": "Hypnotize",
+    "album": "Life After Death",
+    "artist": "The Notorious B.I.G.",
+    "id": 19,
+    "release_year": 1997
+  },
+  {
+    "song": "Bodak Yellow",
+    "album": "Invasion of Privacy",
+    "artist": "Cardi B",
+    "id": 20,
+    "release_year": 2017
+  },
+  {
+    "song": "Rapper's Delight",
+    "album": "Sugarhill Gang",
+    "artist": "Sugarhill Gang",
+    "id": 21,
+    "release_year": 1979
+  },
+  {
+    "song": "Planet Rock",
+    "album": "Planet Rock",
+    "artist": "Afrika Bambaataa & The Soulsonic Force",
+    "id": 22,
+    "release_year": 1982
+  },
+  {
+    "song": "Push It",
+    "album": "Hot, Cool & Vicious",
+    "artist": "Salt-N-Pepa",
+    "id": 23,
+    "release_year": 1987
+  },
+  {
+    "song": "Straight Outta Compton",
+    "album": "Straight Outta Compton",
+    "artist": "N.W.A",
+    "id": 24,
+    "release_year": 1988
+  },
+  {
+    "song": "Children's Story",
+    "album": "The Great Adventures of Slick Rick",
+    "artist": "Slick Rick",
+    "id": 25,
+    "release_year": 1988
+  },
+  {
+    "song": "U.N.I.T.Y.",
+    "album": "Black Reign",
+    "artist": "Queen Latifah",
+    "id": 26,
+    "release_year": 1993
+  },
+  {
+    "song": "Can't Nobody Hold Me Down",
+    "album": "No Way Out",
+    "artist": "Puff Daddy ft. Mase",
+    "id": 27,
+    "release_year": 1997
+  },
+  {
+    "song": "Stan",
+    "album": "The Marshall Mathers LP",
+    "artist": "Eminem ft. Dido",
+    "id": 28,
+    "release_year": 2000
+  },
+  {
+    "song": "Empire State of Mind",
+    "album": "The Blueprint 3",
+    "artist": "Jay-Z ft. Alicia Keys",
+    "id": 29,
+    "release_year": 2009
+  },
+  {
+    "song": "HUMBLE.",
+    "album": "DAMN.",
+    "artist": "Kendrick Lamar",
+    "id": 30,
+    "release_year": 2017
+  }
+]

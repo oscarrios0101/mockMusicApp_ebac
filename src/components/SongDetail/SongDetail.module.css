@@ -1,0 +1,53 @@
+.songDetailContainer {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+  color: #333;
+  width: 100%;
+}
+.songDetailContainer:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.songInfoContainer {
+  padding: 0 20px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.songInfoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.songInfoList li {
+  margin-bottom: 8px;
+  font-size: 1em;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.songInfoList li:last-child {
+  margin-bottom: 0;
+}
+
+.songInfoList li strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.songDetailLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

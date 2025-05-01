@@ -1,0 +1,151 @@
+Introducción
+
+En esta actividad, vamos a conectar nuestra Biblioteca Musical con la API The Audio DB, que nos permitirá obtener información sobre artistas, álbumes y canciones de manera dinámica. 
+
+Usaremos esta API para mejorar la experiencia de usuario mostrando datos reales, en lugar de datos ficticios, y aprenderemos cómo hacer peticiones HTTP para interactuar con servicios externos
+
+Antes de comenzar
+
+Asegúrate de que tu proyecto esté funcionando correctamente con las funcionalidades del módulo anterior y familiarízate con los conceptos clave de este módulo
+
+Endpoints que se consumiram
+
+    Buscar álbumes de un artista: Este endpoint nos devuelve los álbumes asociados a un artista:
+
+        URL del endpoint: https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
+
+        Parámetros: 
+
+            s: El nombre del artista (por ejemplo, "Coldplay").
+
+        Si quieres buscar los álbumes de Oasis, la URL sería: https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=Oasis
+
+    Detalles de un álbum específico: Este endpoint devuelve información detallada de un álbum.
+
+        URL del endpoint: https://theaudiodb.com/api/v1/json/2/album.php?m=id_album
+
+        Parámetros:
+
+            m: ID del álbum (por ejemplo, "2115888").
+
+        Si quieres ver los detalles del álbum "Definitely Maybe" (ID: 2115888), la URL sería: https://theaudiodb.com/api/v1/json/2/album.php?m=2115888
+
+Recuerda que es importante consultar la documentación en caso de dudas, referencias u otros endpoints https://www.theaudiodb.com/free_music_api
+
+Paso a paso
+
+Configura las rutas principales con React Router
+
+    Instala React Router en tu proyecto.
+
+    Envuelve la app en el componente <BrowserRouter> para habilitar la navegación.
+
+    Define dos rutas principales:
+
+        /: Página principal que mostrará los resultados de búsqueda.
+
+        /song/:id: Página que mostrará los detalles de una canción específica.
+
+Conecta tu app a la API de The Audio DB
+
+    Realiza una petición al endpoint de búsqueda de álbumes
+
+        Utiliza el custom hook useFetch para realizar una petición al endpoint de búsqueda de álbumes de un artista en la API The Audio DB.
+
+        Este hook debe recibir la URL del endpoint como parámetro y manejar los estados de carga, éxito y error.
+
+    Procesa los datos de la respuesta
+
+        La respuesta del endpoint devolverá información sobre los álbumes del artista buscado. Extrae la información relevante, como el título de los álbumes y sus canciones asociadas.
+
+        Asegúrate de transformar los datos en un formato que sea fácil de manejar en tu app. Por ejemplo, podrías mapear los álbumes a canciones específicas.
+
+    Integra el input de búsqueda con la API
+
+        Crea un componente SearchBar que incluya:
+
+            Un input para ingresar el nombre de un artista.
+
+            Un botón o funcionalidad que dispare la búsqueda al hacer clic o presionar Enter.
+
+        Conecta este componente al estado principal en App utilizando useState para guardar el término de búsqueda ingresado por el usuario.
+
+        Cada vez que se envíe una búsqueda, realiza una petición al endpoint de búsqueda de álbumes en la API utilizando el término ingresado.
+
+        Asegurate de que el formulario sea controlado por React
+
+    Muestra las canciones en la página principal (/)
+
+        Renderiza las canciones obtenidas en el componente SearchResults.
+
+        Cada canción debe mostrar información básica como el título, el artista y el álbum al que pertenece.
+
+        Integra estas canciones en el flujo actual de la app, reemplazando los datos ficticios utilizados anteriormente.
+
+Implementa renderizado condicional
+
+    Muestra un mensaje de carga
+
+        Mientras los datos están siendo obtenidos de la API, muestra un mensaje como "Cargando..." para indicar al usuario que debe esperar.
+
+        Esto debe manejarse en el estado de carga del custom hook useFetch.
+
+    Muestra un mensaje de error
+
+        Si ocurre un error al realizar la petición, muestra un mensaje claro al usuario, por ejemplo: "Hubo un problema al cargar los datos. Intenta nuevamente".
+
+        Proporciona una opción para reintentar la petición, como un botón que vuelva a ejecutar el useFetch.
+
+    Renderiza la lista solo si los datos están disponibles
+
+        Asegúrate de que las canciones solo se rendericen cuando el estado de carga indique que los datos están disponibles y no hubo errores.
+
+        Esto previene posibles errores de renderizado si los datos no se cargaron correctamente.
+
+Crea la página de detalles para las canciones
+
+    Define un nuevo componente SongDetail
+
+        Este componente debe estar dedicado a mostrar información específica de una canción.
+
+    Obtén el ID de la canción desde la URL
+
+        Utiliza el hook useParams de React Router para acceder al parámetro id en la URL. Este ID será utilizado para identificar la canción que deseas detallar.
+
+    Realiza una petición al endpoint de detalles
+
+        Usa el ID obtenido de la URL para realizar una petición al endpoint de detalles de un álbum en la API.
+
+        Este endpoint devolverá información detallada del álbum, como las canciones, el año de lanzamiento y el artista. Filtra los datos necesarios para mostrar la información relevante de la canción específica.
+
+    Muestra información relevante de la canción
+
+        Renderiza información como:
+
+            Título de la canción.
+
+            Nombre del artista.
+
+            Álbum al que pertenece.
+
+        Asegúrate de manejar errores o estados de carga para esta petición también.
+
+
+Conecta las canciones de la lista de resultados con la página de detalles
+
+    Agrega un enlace en cada canción
+
+        En el componente SearchResults, incluye un enlace (<Link>) en cada canción. Este enlace debe llevar al usuario a la página de detalles de la canción (/song/:id).
+
+        Asegúrate de incluir el ID de la canción como parte de la URL.
+
+    Asegura que la navegación funcione correctamente
+
+        Verifica que al hacer clic en el enlace, la app navegue correctamente a la página de detalles.
+
+        Confirma que el componente SongDetail reciba el ID de la canción desde la URL y cargue los datos correspondientes desde la API.
+
+
+¿Cómo presentar su entrega?
+
+Sube tus cambios al repositorio en GitHub y asegúrate de no incluir la carpeta node_modules.
