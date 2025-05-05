@@ -1,13 +1,20 @@
+// src/components/Homepage/Homepage.js
+import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import SearchResults from "../SearchResults/SearchResults";
+import { StyledMain, StyledTitle } from "./Homepage.styles";
 
-const Homepage = () => {
+const Homepage = ({ appName }) => {
+  // Receive props
   return (
-    <main>
-      <h1>Homepage app</h1>
+    <StyledMain>
+      <StyledTitle>{appName}</StyledTitle>
       <SearchBar />
-    </main>
+    </StyledMain>
   );
+};
+
+Homepage.defaultProps = {
+  appName: "Music App", // Default prop value
 };
 
 export default Homepage;

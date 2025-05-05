@@ -1,4 +1,14 @@
+// src/components/SearchBar/SearchBar.js
 import React, { useState } from "react";
+import {
+  StyledSearchBarContainer,
+  StyledInput,
+  StyledButton,
+  StyledRadioGroup,
+  StyledRadioLabel,
+  StyledLoading,
+  StyledError,
+} from "./SearchBar.styles";
 
 import {
   searchByArtistName,
@@ -7,9 +17,9 @@ import {
 } from "../../utils/musicApi";
 import SearchResults from "../SearchResults/SearchResults";
 
-const SearchBar = () => {
+const SearchBar = ({ searchTypes = ["artist"] }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchType, setSearchType] = useState("artist");
+  const [searchType, setSearchType] = useState(searchTypes[0] || "artist");
   const [searchResults, setSearchResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -63,52 +73,47 @@ const SearchBar = () => {
     }
   };
 
+  const getPlaceholderText = () => {
+    switch (searchType) {
+      case "artist":
+        return "Search for artist name...todo search by artist id and album id";
+
+      default:
+        return "Search...";
+    }
+  };
+
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={handleInputChange}
-          placeholder={
-            searchType === "artist"
-              ? "Search for artist name..."
-              : searchType === "albumId"
-              ? "Search for album ID..."
-              : "Search..." // Default placeholder
-          }
-        />
-        <button type="button" onClick={triggerSearch} disabled={loading}>
-          {loading ? "Searching..." : "Search"}
-        </button>
-      </div>
-      <div>
+    <StyledSearchBarContainer>
+      <StyledInput
+        type="text"
+        value={searchQuery}
+        onChange={handleInputChange}
+        placeholder={getPlaceholderText()}
+      />
+      <StyledButton type="button" onClick={triggerSearch} disabled={loading}>
+        {loading ? "Searching..." : "Search"}
+      </StyledButton>
+      <StyledRadioGroup>
         <div>
           <input
             type="radio"
             value="artist"
             checked={searchType === "artist"}
             onChange={handleRadioChange}
+            id="artistRadio"
           />
-          <label>Artist</label>
-
-          <input
-            type="radio"
-            value="albumId"
-            checked={searchType === "albumId"}
-            onChange={handleRadioChange}
-          />
-          <label>Album ID</label>
+          <StyledRadioLabel htmlFor="artistRadio">Artist Name</StyledRadioLabel>
         </div>
-      </div>
+      </StyledRadioGroup>
 
-      {loading && <p>Searching...</p>}
-      {error && <p>Error: {error}</p>}
+      {loading && <StyledLoading>Searching...</StyledLoading>}
+      {error && <StyledError>Error: {error}</StyledError>}
 
       {searchResults && (
         <SearchResults searchResults={searchResults} searchType={searchType} />
       )}
-    </div>
+    </StyledSearchBarContainer>
   );
 };
 

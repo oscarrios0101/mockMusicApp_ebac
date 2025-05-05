@@ -1,7 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import { getSongById } from "../../utils/musicApi.js";
+
+const StyledSongDetails = styled.div`
+  padding: 2em;
+  margin: 2em auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+`;
+
+const StyledTitle = styled.h2`
+  color: #333;
+  margin-bottom: 0.5em;
+`;
+
+const StyledInfo = styled.p`
+  color: #555;
+  margin-bottom: 0.3em;
+`;
+
+const StyledThumb = styled.img`
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-top: 1em;
+`;
+
+const StyledLoading = styled.p`
+  color: #555;
+  font-style: italic;
+`;
+
+const StyledNotFound = styled.p`
+  color: #777;
+`;
 
 const SongWrapperComponent = () => {
   const [song, setSong] = useState(null);
@@ -32,20 +71,22 @@ const SongWrapperComponent = () => {
   }, [songId]);
 
   return (
-    <div>
+    <StyledSongDetails>
       {loading ? (
-        <p>Loading song details...</p>
+        <StyledLoading>Loading song details...</StyledLoading>
+      ) : song ? (
+        <div>
+          <StyledTitle>{song.strTrack}</StyledTitle>
+          <StyledInfo>Artist: {song.strArtist}</StyledInfo>
+          <StyledInfo>Album: {song.strAlbum}</StyledInfo>
+          {song.strTrackThumb && (
+            <StyledThumb src={song.strTrackThumb} alt={song.strTrack} />
+          )}
+        </div>
       ) : (
-        song && (
-          <div>
-            <h2>{song.strTrack}</h2>
-            <p>Artist: {song.strArtist}</p>
-            <p>Album: {song.strAlbum}</p>
-            <img src={song.strTrackThumb} alt={song.strTrack} />
-          </div>
-        )
+        <StyledNotFound>Song not found.</StyledNotFound>
       )}
-    </div>
+    </StyledSongDetails>
   );
 };
 

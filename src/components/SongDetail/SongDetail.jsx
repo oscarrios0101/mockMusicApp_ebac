@@ -1,39 +1,34 @@
-import { Link } from "react-router-dom";
+// src/components/SongDetail/SongDetail.js
+import React from "react";
+import {
+  StyledSongLink,
+  StyledSongContainer,
+  StyledList,
+  StyledListItem,
+  StyledId,
+} from "./SongDetail.styles";
 
 const SongDetail = ({ song }) => {
-  // const handleContainerClick = () => {
-  //   console.log(`song clicked: ${song.strTrack}`);
-  // };
-
   return (
-    // Use Link to navigate, passing the song id in the URL
-    <Link to={`/song/${song.idTrack}`}>
-      <div>
-        {" "}
-        {/* Keep your styling div inside the Link */}
-        <div>
-          <ul>
-            <li>
-              Song Name:
-              <br />
-              {song.strTrack}
-            </li>
-            <li>
-              Album Name:
-              <br />
-              {song.strAlbum}
-            </li>
-            <li>
-              Artist Name:
-              <br />
-              {song.strArtist}
-            </li>
-
-            <li>Id track: {song.idTrack}</li>
-          </ul>
-        </div>
-      </div>
-    </Link>
+    <StyledSongLink to={`/song/${song.idTrack}`}>
+      <StyledSongContainer>
+        <StyledList>
+          <StyledListItem>
+            <strong>Song Name:</strong>
+            {song.strTrack}
+          </StyledListItem>
+          <StyledListItem>
+            <strong>Album Name:</strong>
+            {song.strAlbum}
+          </StyledListItem>
+          <StyledListItem>
+            <strong>Artist Name:</strong>
+            {song.strArtist}
+          </StyledListItem>
+          <StyledId>ID: {song.idTrack}</StyledId>
+        </StyledList>
+      </StyledSongContainer>
+    </StyledSongLink>
   );
 };
 
