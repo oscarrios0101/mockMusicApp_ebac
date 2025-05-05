@@ -1,4 +1,3 @@
-import styles from "./SongDetail.module.css";
 import { Link } from "react-router-dom";
 
 const SongDetail = ({ song }) => {
@@ -8,12 +7,12 @@ const SongDetail = ({ song }) => {
 
   return (
     // Use Link to navigate, passing the song id in the URL
-    <Link to={`/song/${song.idTrack}`} className={styles.songDetailLink}>
-      <div className={styles.songDetailContainer}>
+    <Link to={`/song/${song.idTrack}`}>
+      <div>
         {" "}
         {/* Keep your styling div inside the Link */}
-        <div className={styles.songInfoContainer}>
-          <ul className={styles.songInfoList}>
+        <div>
+          <ul>
             <li>
               Song Name:
               <br />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./SongWrapperComponent.module.css";
+
 import { getSongById } from "../../utils/musicApi.js";
 
 const SongWrapperComponent = () => {
@@ -32,20 +32,16 @@ const SongWrapperComponent = () => {
   }, [songId]);
 
   return (
-    <div className={styles.songWrapper}>
+    <div>
       {loading ? (
-        <p className={styles.loading}>Loading song details...</p>
+        <p>Loading song details...</p>
       ) : (
         song && (
-          <div className={styles.songContainer}>
-            <h2 className={styles.songTitle}>{song.strTrack}</h2>
-            <p className={styles.artistName}>Artist: {song.strArtist}</p>
-            <p className={styles.albumName}>Album: {song.strAlbum}</p>
-            <img
-              src={song.strTrackThumb}
-              alt={song.strTrack}
-              className={styles.songImage}
-            />
+          <div>
+            <h2>{song.strTrack}</h2>
+            <p>Artist: {song.strArtist}</p>
+            <p>Album: {song.strAlbum}</p>
+            <img src={song.strTrackThumb} alt={song.strTrack} />
           </div>
         )
       )}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SearchBar.module.css";
+
 import {
   searchByArtistName,
   getAlbumById,
@@ -64,10 +64,9 @@ const SearchBar = () => {
   };
 
   return (
-    <div className={styles.SearchBarContainer}>
-      <div className={styles.SearchInputContainer}>
+    <div>
+      <div>
         <input
-          className={styles.searchInput}
           type="text"
           value={searchQuery}
           onChange={handleInputChange}
@@ -79,17 +78,12 @@ const SearchBar = () => {
               : "Search..." // Default placeholder
           }
         />
-        <button
-          type="button"
-          className={styles.searchButton}
-          onClick={triggerSearch}
-          disabled={loading}
-        >
+        <button type="button" onClick={triggerSearch} disabled={loading}>
           {loading ? "Searching..." : "Search"}
         </button>
       </div>
-      <div className={styles.RadioContainer}>
-        <div className={styles.RadioButtons}>
+      <div>
+        <div>
           <input
             type="radio"
             value="artist"
@@ -109,7 +103,7 @@ const SearchBar = () => {
       </div>
 
       {loading && <p>Searching...</p>}
-      {error && <p className={styles.errorMessage}>Error: {error}</p>}
+      {error && <p>Error: {error}</p>}
 
       {searchResults && (
         <SearchResults searchResults={searchResults} searchType={searchType} />

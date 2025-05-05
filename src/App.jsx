@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.module.css";
 
 import Homepage from "./components/Homepage/Homepage";
-import { SearchProvider } from "./components/Context/SearchContex";
+
 import AlbumDetails from "./components/AlbumDetails/AlbumDetails";
 
 import SongWrapperComponent from "./components/SongWrapperComponent/SongWrapperComponent";
@@ -13,15 +13,13 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <SearchProvider>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/album/:albumId" element={<AlbumDetails />} />
-            <Route path="/song/:songId" element={<SongWrapperComponent />} />
-            {/* <Route path="/test/" element={<TestElement />} /> */}
-          </Routes>
-        </SearchProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/album/:albumId" element={<AlbumDetails />} />
+          <Route path="/song/:songId" element={<SongWrapperComponent />} />
+          {/* <Route path="/test/" element={<TestElement />} /> */}
+        </Routes>
       </BrowserRouter>
     </>
   );

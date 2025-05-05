@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../SearchResults/SearchResults.module.css";
+
 import { getAlbumsByArtistId } from "../../utils/musicApi";
 import ArtistAlbums from "../ArtistAlbums/ArtistAlbums";
 
@@ -40,13 +40,11 @@ const SearchResults = ({ searchResults, searchType }) => {
 
   return (
     <section>
-      <p className={styles.searchResultsComment}>
-        here is the logic of search results
-      </p>
+      <p>here is the logic of search results</p>
       {console.log(searchResults)}
       {searchType === "artist" && searchResults?.artists?.[0]?.idArtist && (
         <div>
-          <h3 className={styles.artistAlbumsHeader}>
+          <h3>
             Fetching albums for artist ID: {searchResults.artists[0].idArtist}
           </h3>
           {loadingAlbums && <p>Loading albums...</p>}
