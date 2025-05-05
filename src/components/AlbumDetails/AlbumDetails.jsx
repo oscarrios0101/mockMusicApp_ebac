@@ -1,76 +1,93 @@
+// src/components/AlbumDetails/AlbumDetails.js
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Import useParams
-import { getSongsByAlbumId, getAlbumById } from "../../utils/musicApi"; // Import the API function
-import styles from "./AlbumDetails.module.css";
+import { useParams } from "react-router-dom";
+import { getSongsByAlbumId, getAlbumById } from "../../utils/musicApi";
 import SongDetail from "../SongDetail/SongDetail";
+import {
+  Container,
+  Heading,
+  LoadingMessage,
+  ErrorMessage,
+  NoAlbumMessage,
+  AlbumInfo,
+  AlbumName,
+  AlbumId,
+  SongsPlaceholder,
+  SongsHeading,
+} from "./AlbumDetails.styles";
 
 const AlbumDetails = () => {
-  // Get the albumId from the URL parameters
   const { albumId } = useParams();
-  const handleSongClick = (song) => {
-    console.log("Song clicked:", song);
-  };
-
   const [album, setAlbum] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    getSongsByAlbumId(albumId).then((data) => {
-      setLoading(false);
-      if (data && data.track.length > 0) {
-        // console.log(`we are getting the songs data${data}`);
-        // setSongs(data);
-        console.log(data.track);
-        setSongs(data.track);
-        setError(false);
+    const fetchSongs = async () => {
+      try {
+        const data = await getSongsByAlbumId(albumId);
         setLoading(false);
+        if (data && data.track && data.track.length > 0) {
+          setSongs(data.track);
+        } else {
+          setSongs([]);
+        }
+      } catch (err) {
+        setLoading(false);
+        setError(err.message);
+        console.error("Error fetching songs:", err);
       }
-    });
-  }, [albumId]); // Re-run effect if albumId changes
+    };
+
+    fetchSongs();
+  }, [albumId]);
 
   useEffect(() => {
-    getAlbumById(albumId).then((data) => {
-      setLoading(false);
-      if (data && data.album.length > 0) {
-        setAlbum(data.album[0]);
-        setError(false);
+    const fetchAlbum = async () => {
+      try {
+        const data = await getAlbumById(albumId);
         setLoading(false);
+        if (data && data.album && data.album.length > 0) {
+          setAlbum(data.album[0]);
+        } else {
+          setAlbum(null);
+        }
+      } catch (err) {
+        setLoading(false);
+        setError(err.message);
+        console.error("Error fetching album:", err);
       }
-    });
+    };
+
+    fetchAlbum();
   }, [albumId]);
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.heading}>Album Details</h2>
-      {loading && (
-        <p className={styles.loadingMessage}>Loading album details...</p>
-      )}
+    <Container>
+      <Heading>Album Details</Heading>
+      {loading && <LoadingMessage>Loading album details...</LoadingMessage>}
       {error && (
-        <p className={styles.errorMessage}>
-          Error loading album details: {error.message}
-        </p>
+        <ErrorMessage>Error loading album details: {error}</ErrorMessage>
       )}
       {!loading && !album && !error && (
-        <p className={styles.noAlbumMessage}>
-          No album found with ID: {albumId}
-        </p>
+        <NoAlbumMessage>No album found with ID: {albumId}</NoAlbumMessage>
       )}
       {album && (
-        <div className={styles.albumInfo}>
-          <p className={styles.albumName}>Album Name: {album.strAlbum}</p>
-          <p className={styles.albumId}>Album ID: {album.idAlbum}</p>
-        </div>
+        <AlbumInfo>
+          <AlbumName>Album Name: {album.strAlbum}</AlbumName>
+          <AlbumId>Album ID: {album.idAlbum}</AlbumId>
+          {/* You can add more album details here if needed */}
+        </AlbumInfo>
       )}
 
-      <div className={styles.songsPlaceholder}>
-        <h3 className={styles.songsHeading}>Songs</h3>
+      <SongsPlaceholder>
+        <SongsHeading>Songs</SongsHeading>
         {songs.map((song) => (
           <SongDetail key={song.idTrack} song={song} />
         ))}
-      </div>
-    </div>
+      </SongsPlaceholder>
+    </Container>
   );
 };
 
